@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import { FcSearch } from 'react-icons/fc';
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -28,7 +30,7 @@ class SearchBar extends Component {
           value={this.state.value}
         />
         <button className="btn btn-outline-success" type="submit">
-          Search
+          <FcSearch/>
         </button>
       </form>
     );
