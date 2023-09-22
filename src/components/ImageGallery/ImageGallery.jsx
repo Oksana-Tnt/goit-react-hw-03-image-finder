@@ -20,6 +20,7 @@ class ImageGallery extends Component {
     page: 1,
     largeImageURL: '',
     isShowModal: false,
+    tags: '',
     totalPages: 0,
   };
 
@@ -73,9 +74,10 @@ class ImageGallery extends Component {
   };
 
   showImage = id => {
-    this.setState(({ largeImageURL }) => ({
+    this.setState(({ largeImageURL, tags }) => ({
       largeImageURL: this.state.images.find(image => image.id === id)
         .largeImageURL,
+      tags: this.state.images.find(image => image.id === id).tags,
     }));
   };
 
@@ -91,7 +93,7 @@ class ImageGallery extends Component {
               <ImageItem key={el.id}>
                 {this.state.isShowModal && (
                   <Modal closeModal={this.toggleModal}>
-                    <img src={this.state.largeImageURL} />
+                    <img src={this.state.largeImageURL} alt={this.state.tags} />
                   </Modal>
                 )}
 

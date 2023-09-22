@@ -4,11 +4,9 @@ import { Img } from './ImageGallery.styled';
 const ImageGalleryItem = ({ webformatURL, tags, id, showModal, showImage }) => {
   return (
     <>
-      <a onClick={showModal}>
-        <div onClick={() => showImage(id)}>
-          <Img src={webformatURL} alt={tags} />
-        </div>
-      </a>
+      <div onClick={showModal}>
+        <Img src={webformatURL} alt={tags} onClick={() => showImage(id)} />
+      </div>
     </>
   );
 };
