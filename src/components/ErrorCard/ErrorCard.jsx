@@ -6,7 +6,7 @@ const ErrorCard = () => {
     <div className="card">
       <div className="card-body">
         <h5 className="card-title">OOOps, there is no image</h5>
-        <img src={img} width="300px" />
+        <img src={img} width="300px" alt="Sad cat" />
       </div>
     </div>
   );
