@@ -1,7 +1,7 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
 export const Img = styled.img`
-    width: 100%;
-    height: 100%;
-
-`
+  display: block;
+  width: 400px;
+  height: 250px;
+`;

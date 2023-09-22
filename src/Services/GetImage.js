@@ -3,7 +3,7 @@ import axios from 'axios';
 const BASE_URL = 'https://pixabay.com/api/';
 const API_KEY = '38684131-28b4482e9fc4dba2cc1ab34a8';
 
-export const getImage = (searchText, page=1) => {
+export const getImage = (searchText, page = 1) => {
   const Per_Page = 12;
 
   const param = new URLSearchParams({
@@ -17,5 +17,4 @@ export const getImage = (searchText, page=1) => {
   });
 
   return axios.get(`${BASE_URL}?${param}`);
- 
 };

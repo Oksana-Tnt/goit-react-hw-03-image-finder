@@ -1,12 +1,14 @@
 import React from 'react';
 import { Img } from './ImageGallery.styled';
 
-const ImageGalleryItem = ({ webformatURL, tags}) => {
+const ImageGalleryItem = ({ webformatURL, tags, id, showModal, showImage }) => {
   return (
     <>
-    
-        <Img src={webformatURL} alt={tags}/>
-    
+      <a onClick={showModal}>
+        <div onClick={() => showImage(id)}>
+          <Img src={webformatURL} alt={tags} />
+        </div>
+      </a>
     </>
   );
 };
